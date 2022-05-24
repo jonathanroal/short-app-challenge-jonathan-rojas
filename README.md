@@ -30,3 +30,9 @@
 # Checking your short URL redirect
 
     curl -I localhost:3000/abc
+
+# Shortening algorithm
+
+The shortening algorithm implemented relies on the ShortUrl database object ID created and managed automatically by the
+database itself, which is then taken and converted from base 10 to base 62, the base 62 value is then used as a shortcode.
+Note that this shortcode is not stored in the database but rather calculated on the spot using the given id.
